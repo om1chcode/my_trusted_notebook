@@ -1,10 +1,10 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 import org.om1chcode.mytrustednotebook.db.Note
 
 sealed class NotesEvent
 {
-	data class Order( val noteOrder : NoteOrder ) : NotesEvent()
+	data class Order( val noteOrder : NoteOrder) : NotesEvent()
 	data class DeleteNote( val note : Note ) : NotesEvent()
 	object RestoreNote: NotesEvent()
 	object ToggleOrderSelection : NotesEvent()

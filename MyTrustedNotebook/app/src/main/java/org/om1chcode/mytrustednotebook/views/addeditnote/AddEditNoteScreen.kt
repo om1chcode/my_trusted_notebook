@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook.views
+package org.om1chcode.mytrustednotebook.views.addeditnote
 
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.core.tween
@@ -21,12 +21,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import org.om1chcode.mytrustednotebook.AddEditNoteViewModel
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.om1chcode.mytrustednotebook.AddEditNoteEvent
 import org.om1chcode.mytrustednotebook.db.Note
+import org.om1chcode.mytrustednotebook.views.TransparentHintTextField
 
 @Composable
 fun AddEditNoteScreen(
@@ -70,7 +69,7 @@ fun AddEditNoteScreen(
 			FloatingActionButton(
 				onClick =
 				{
-					viewModel.onEvent( AddEditNoteEvent.SaveNote )
+					viewModel.onEvent(AddEditNoteEvent.SaveNote)
 				},
 				backgroundColor = MaterialTheme.colors.primary
 			)

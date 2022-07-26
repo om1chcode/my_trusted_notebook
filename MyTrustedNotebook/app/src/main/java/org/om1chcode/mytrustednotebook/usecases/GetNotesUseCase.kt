@@ -2,8 +2,8 @@ package org.om1chcode.mytrustednotebook.usecases
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import org.om1chcode.mytrustednotebook.NoteOrder
-import org.om1chcode.mytrustednotebook.OrderType
+import org.om1chcode.mytrustednotebook.views.listnotes.NoteOrder
+import org.om1chcode.mytrustednotebook.views.listnotes.OrderType
 import org.om1chcode.mytrustednotebook.db.Note
 import org.om1chcode.mytrustednotebook.db.NoteRepository
 

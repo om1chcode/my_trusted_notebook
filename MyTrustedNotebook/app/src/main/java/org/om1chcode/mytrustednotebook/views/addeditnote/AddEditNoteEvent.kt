@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.addeditnote
 
 import androidx.compose.ui.focus.FocusState
 

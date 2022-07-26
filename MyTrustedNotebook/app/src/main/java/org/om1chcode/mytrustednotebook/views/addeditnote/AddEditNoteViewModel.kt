@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.addeditnote
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -13,7 +13,6 @@ import kotlinx.coroutines.launch
 import org.om1chcode.mytrustednotebook.db.InvalidNoteException
 import org.om1chcode.mytrustednotebook.db.Note
 import org.om1chcode.mytrustednotebook.usecases.NoteUseCases
-import org.om1chcode.mytrustednotebook.views.NoteTextFieldState
 import javax.inject.Inject
 
 @HiltViewModel
@@ -22,15 +21,19 @@ class AddEditNoteViewModel @Inject constructor(
 	savedStateHandle : SavedStateHandle
 ) : ViewModel()
 {
-	private val _noteTitle = mutableStateOf(NoteTextFieldState(
+	private val _noteTitle = mutableStateOf(
+		NoteTextFieldState(
 		hint = "Enter title..."
-	))
-	val noteTitle : State<NoteTextFieldState > = _noteTitle
+	)
+	)
+	val noteTitle : State<NoteTextFieldState> = _noteTitle
 
-	private val _noteContent = mutableStateOf(NoteTextFieldState(
+	private val _noteContent = mutableStateOf(
+		NoteTextFieldState(
 		hint = "Enter some content..."
-	))
-	val noteContent : State<NoteTextFieldState > = _noteContent
+	)
+	)
+	val noteContent : State<NoteTextFieldState> = _noteContent
 
 	private val _noteColor = mutableStateOf(Note.noteColors.random().toArgb())
 	val noteColor : State<Int> = _noteColor
@@ -64,7 +67,7 @@ class AddEditNoteViewModel @Inject constructor(
 		}
 	}
 	// -----------------------------------------------------------------------------------------------------------------
-	fun onEvent( event: AddEditNoteEvent )
+	fun onEvent( event: AddEditNoteEvent)
 	{
 		when( event )
 		{
@@ -115,7 +118,7 @@ class AddEditNoteViewModel @Inject constructor(
 								id = currentNoteId
 							)
 						)
-						_eventFlow.emit( UiEvent.SaveNote )
+						_eventFlow.emit(UiEvent.SaveNote)
 					}
 					catch( e: InvalidNoteException )
 					{

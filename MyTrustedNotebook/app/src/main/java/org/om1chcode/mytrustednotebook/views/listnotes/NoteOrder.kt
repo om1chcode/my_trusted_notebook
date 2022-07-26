@@ -1,16 +1,16 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 sealed class NoteOrder(
 	val orderType : OrderType
 )
 {
-	class Title( orderType : OrderType ) : NoteOrder( orderType )
-	class Date( orderType : OrderType ) : NoteOrder( orderType )
-	class Color( orderType : OrderType ) : NoteOrder( orderType )
+	class Title( orderType : OrderType) : NoteOrder( orderType )
+	class Date( orderType : OrderType) : NoteOrder( orderType )
+	class Color( orderType : OrderType) : NoteOrder( orderType )
 
 
 	// -----------------------------------------------------------------------------------------------------------------
-	fun copy( orderType : OrderType ) : NoteOrder
+	fun copy( orderType : OrderType) : NoteOrder
 	{
 		return when( this )
 		{

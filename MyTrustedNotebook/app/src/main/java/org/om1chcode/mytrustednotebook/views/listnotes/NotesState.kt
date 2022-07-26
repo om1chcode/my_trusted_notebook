@@ -1,9 +1,9 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 import org.om1chcode.mytrustednotebook.db.Note
 
 data class NotesState(
 	val notes : List<Note> = emptyList(),
-	val noteOrder : NoteOrder = NoteOrder.Date( OrderType.Descending ),
+	val noteOrder : NoteOrder = NoteOrder.Date(OrderType.Descending),
 	val isOrderSelectionVisible : Boolean = false
 )

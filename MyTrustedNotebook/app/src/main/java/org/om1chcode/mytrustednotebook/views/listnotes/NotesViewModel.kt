@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -27,11 +27,11 @@ class NotesViewModel @Inject constructor(
 
 	init
 	{
-		getNotes( NoteOrder.Date( OrderType.Descending ))
+		getNotes(NoteOrder.Date(OrderType.Descending))
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	fun onEvent( event : NotesEvent )
+	fun onEvent( event : NotesEvent)
 	{
 		when( event )
 		{
@@ -72,7 +72,7 @@ class NotesViewModel @Inject constructor(
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
-	private fun getNotes( noteOrder : NoteOrder )
+	private fun getNotes( noteOrder : NoteOrder)
 	{
 		getNotesJob?.cancel()
 		getNotesJob = noteUseCases.getNotes( noteOrder )

@@ -13,8 +13,8 @@ import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
 
 import org.om1chcode.mytrustednotebook.ui.theme.MyTrustedNotebookTheme
-import org.om1chcode.mytrustednotebook.views.AddEditNoteScreen
-import org.om1chcode.mytrustednotebook.views.NotesScreen
+import org.om1chcode.mytrustednotebook.views.addeditnote.AddEditNoteScreen
+import org.om1chcode.mytrustednotebook.views.listnotes.NotesScreen
 
 // ---------------------------------------------------------------------------------------------------------------------
 @AndroidEntryPoint

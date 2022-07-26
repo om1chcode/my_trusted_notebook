@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 sealed class OrderType
 {

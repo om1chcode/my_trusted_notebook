@@ -1,4 +1,4 @@
-package org.om1chcode.mytrustednotebook.views
+package org.om1chcode.mytrustednotebook.views.listnotes
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.clickable
@@ -17,9 +17,9 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.launch
-import org.om1chcode.mytrustednotebook.NotesViewModel
-import org.om1chcode.mytrustednotebook.NotesEvent
 import org.om1chcode.mytrustednotebook.Screen
+import org.om1chcode.mytrustednotebook.views.NoteItem
+import org.om1chcode.mytrustednotebook.views.OrderSection
 
 @Composable
 fun NotesScreen(
@@ -70,7 +70,7 @@ fun NotesScreen(
 				IconButton(
 					onClick =
 					{
-						viewModel.onEvent( NotesEvent.ToggleOrderSelection )
+						viewModel.onEvent(NotesEvent.ToggleOrderSelection)
 					}
 				)
 				{
